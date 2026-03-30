@@ -5,11 +5,11 @@ const app = express();
 const PUERTO = 80;
 
 // Servir archivos estáticos desde la carpeta "public"
-app.use(express.static("public"));
+app.use(express.static("web"));
 
 
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "index.htm"));
+  res.sendFile(path.join(__dirname, "web", "index.htm"));
 });
 
 app.listen(PUERTO, () => {
